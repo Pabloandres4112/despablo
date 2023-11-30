@@ -5,5 +5,5 @@ hola
 @endsection
 
 @section('contenido')
-hi
+
 @endsection
