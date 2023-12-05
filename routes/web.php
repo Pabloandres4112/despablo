@@ -17,6 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/registro',[RegistroUsuario::class,'registro'])->name('regitro');
+Route::get('/registro',[RegistroUsuario::class,'registro'])->name('registro');
 
 // Route::get('/register', [RegisterContoller::class , 'Hola']) -> name(  'register');
