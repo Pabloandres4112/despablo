@@ -17,8 +17,6 @@ return new class extends Migration
             $table->integer('cedula')->unique();
             $table->string('direccion');
             $table->integer('telefono');
-            $table->rememberToken();
-            $table->timestamps();
         });
     }
 
