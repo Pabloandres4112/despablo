@@ -11,7 +11,7 @@
                     class="shadow-2xl rounded-2xl" style="width: 80%; height: 100%;">
                 </div>
                 <div class="p-6 bg-white rounded-lg shadow-xl md:w-4/12">
-                    <form action="/registro" method="POST">
+                    <form method="POST">
                         @csrf {{--  //para poder navegar de una pagina a otra  --}}
                         <div class="mb-5">
                             <label for="name" class="block">Nombre</label>
@@ -23,7 +23,7 @@
                         </div>
                         <div class="mb-5">
                             <label for="cedula">Cedula</label>
-                            <input type="number" name="cedula" id="cedula" placeholder="Ingrese su Cedula"
+                            <input type="text" name="cedula" id="cedula" placeholder="Ingrese su Cedula"
                             class="@error('bg-red-500')
                             @enderror" value="{{ old('cedula') }}">
 
@@ -42,12 +42,24 @@
                         </div>
                         <div class="mb-5">
                             <label for="tefono">Telefono</label>
-                            <input type="number" name="telefono" id="telefono" placeholder="Ingrese su numero " class="@error('bg-red-500')
+                            <input type="text" name="telefono" id="telefono" placeholder="Ingrese su numero " class="@error('bg-red-500')
 
                             @enderror" value="{{ old('telefono') }}">
                             @error('telefono')
                             <p class="p-2 my-2 text-sm text-center text-white bg-red-500 rounded-lg">{{ $message }}</p>
                             @enderror
+                        </div>
+                        <div class="mb-5">
+                            <label for="password" class="mb-2 block uppercase text-gray-500 font-bold" >Password</label>
+                            <input type="password" id="password" name="password" placeholder="password" class="border p-3 w-full rounded-lg @error('password') border-red-500 @enderror">
+                            @error('password')
+                            <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{ $message }}</p>
+                            @enderror
+                        </div>
+                        
+                        <div class="mb-5">
+                            <label for="password_confirmation" class="mb-2 block uppercase text-gray-500 font-bold" >Repetir Password</label>
+                            <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Repetir password" class="border p-3 w-full rounded-lg">
                         </div>
                         <input type="submit" value="Crear cuenta" class="bg-sky-500 hover:bg-sky-700 transition-color cursor-pointer uppercase font-bold w-full p-3 text-white rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
                     </form>

@@ -13,7 +13,7 @@
         <header class="flex items-center justify-between p-5 bg-white border-b shadow ">
             <h1 class="text-3xl font-black">EcoAppliances👻</h1>
             <nav>
-                <a href="./" class="font-bold text-gray-600 uppercase text-small"> Login</a>
+                <a href="/login" class="font-bold text-gray-600 uppercase text-small"> Login</a>
                 <a href="/registro" class="font-bold text-gray-600 uppercase text-small "> Crear cuneta </a>
             </nav>
         </header>
